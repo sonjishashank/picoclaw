@@ -1,6 +1,6 @@
 #!/bin/sh
-mkdir -p /root/.picoclaw
-cp /etc/secrets/config.json /root/.picoclaw/config.json
+mkdir -p /home/picoclaw/.picoclaw
+cp /etc/secrets/config.json /home/picoclaw/.picoclaw/config.json
 /usr/local/bin/picoclaw gateway
 ```
 
