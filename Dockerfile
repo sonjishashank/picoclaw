@@ -38,6 +38,7 @@ USER picoclaw
 
 # Run onboard to create initial directories and config
 RUN /usr/local/bin/picoclaw onboard
-
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 ENTRYPOINT ["picoclaw"]
 CMD ["gateway"]
