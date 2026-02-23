@@ -35,10 +35,8 @@ RUN addgroup -g 1000 picoclaw && \
 
 # Switch to non-root user
 USER picoclaw
-
-# Run onboard to create initial directories and config
 RUN /usr/local/bin/picoclaw onboard
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
-ENTRYPOINT ["picoclaw"]
+ENTRYPOINT ["/bin/sh", "/start.sh"]
 CMD ["gateway"]
